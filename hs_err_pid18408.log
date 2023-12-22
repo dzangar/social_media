@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 98566144 bytes for Failed to commit area from 0x00000000a2400000 to 0x00000000a8200000 of length 98566144.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3269), pid=18408, tid=12372
+#
+# JRE version:  (11.0+28) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11+28, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\lib\idea_rt.jar=56942:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\bin -Dfile.encoding=UTF-8 --module-path=C:\Users\dzang\.m2\repository\org\openjfx\javafx-base\17.0.2\javafx-base-17.0.2-win.jar;C:\Users\dzang\.m2\repository\org\openjfx\javafx-graphics\17.0.2\javafx-graphics-17.0.2-win.jar;C:\Users\dzang\.m2\repository\org\openjfx\javafx-fxml\17.0.2\javafx-fxml-17.0.2-win.jar;C:\Users\dzang\IdeaProjects\FinalProjectSoftware\target\classes;C:\Users\dzang\.m2\repository\org\openjfx\javafx-controls\17.0.2\javafx-controls-17.0.2-win.jar -Djdk.module.main=com.example.finalprojectsoftware com.example.finalprojectsoftware/com.example.finalprojectsoftware.HelloApplication
+
+Host: AMD Ryzen 5 5600H with Radeon Graphics         , 12 cores, 5G,  Windows 10 , 64 bit Build 22621 (10.0.22621.2506)
+Time: Sun Dec 10 16:11:53 2023 Центральная Азия (зима) elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001d6c49b2000):  JavaThread "Unknown thread" [_thread_in_vm, id=12372, stack(0x0000001526400000,0x0000001526500000)]
+
+Stack: [0x0000001526400000,0x0000001526500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63adaa]
+V  [jvm.dll+0x77852f]
+V  [jvm.dll+0x779b18]
+V  [jvm.dll+0x77a1d3]
+V  [jvm.dll+0x2624c8]
+V  [jvm.dll+0x63825a]
+V  [jvm.dll+0x62cb15]
+V  [jvm.dll+0x31563c]
+V  [jvm.dll+0x3154c2]
+V  [jvm.dll+0x31ad36]
+V  [jvm.dll+0x36726f]
+V  [jvm.dll+0x366c90]
+V  [jvm.dll+0x2f2378]
+V  [jvm.dll+0x2f34d6]
+V  [jvm.dll+0x7517d7]
+V  [jvm.dll+0x752f1f]
+V  [jvm.dll+0x374099]
+V  [jvm.dll+0x738059]
+V  [jvm.dll+0x3e35fd]
+V  [jvm.dll+0x3e5961]
+C  [java.exe+0x3603]
+C  [java.exe+0x1746c]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa58]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001d6c2fd37f0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001d6c49ca000 GCTaskThread "GC Thread#0" [stack: 0x0000001526500000,0x0000001526600000] [id=32364]
+  0x000001d6c49f3800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001526600000,0x0000001526700000] [id=36596]
+  0x000001d6c49f5000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001526700000,0x0000001526800000] [id=15840]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffcb7420d37]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001d6c49b1d40] Heap_lock - owner thread: 0x000001d6c49b2000
+
+Heap address: 0x00000000a2400000, size: 1500 MB, Compressed Oops mode: Non-zero based: 0x00000000a2400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7955f0000 - 0x00007ff795635000 	C:\Program Files\Java\jdk-11\bin\java.exe
+0x00007ffd776b0000 - 0x00007ffd778c7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd75fb0000 - 0x00007ffd76074000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffd74c80000 - 0x00007ffd75025000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffd759c0000 - 0x00007ffd75b6e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffd74b40000 - 0x00007ffd74b66000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd76bb0000 - 0x00007ffd76bd9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffd750b0000 - 0x00007ffd751c9000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffd74be0000 - 0x00007ffd74c7a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffd74a20000 - 0x00007ffd74b31000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffd56150000 - 0x00007ffd563e3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100\COMCTL32.dll
+0x00007ffd75e30000 - 0x00007ffd75ed7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffd76cf0000 - 0x00007ffd76d21000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffd48fb0000 - 0x00007ffd48fc6000 	C:\Program Files\Java\jdk-11\bin\vcruntime140.dll
+0x00007ffd2d900000 - 0x00007ffd2d9aa000 	C:\Program Files\Java\jdk-11\bin\msvcp140.dll
+0x00007ffcb7120000 - 0x00007ffcb7c61000 	C:\Program Files\Java\jdk-11\bin\server\jvm.dll
+0x00007ffd75ee0000 - 0x00007ffd75f91000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffd76c40000 - 0x00007ffd76ce6000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffd76a90000 - 0x00007ffd76ba7000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffd767a0000 - 0x00007ffd767a8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffd6d810000 - 0x00007ffd6d844000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffd600c0000 - 0x00007ffd600c9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffd6c3c0000 - 0x00007ffd6c3ca000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffd76250000 - 0x00007ffd762c1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffd73b10000 - 0x00007ffd73b28000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffd411d0000 - 0x00007ffd411e1000 	C:\Program Files\Java\jdk-11\bin\verify.dll
+0x00007ffd71ee0000 - 0x00007ffd72113000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffd763b0000 - 0x00007ffd76739000 	C:\WINDOWS\System32\combase.dll
+0x00007ffd762d0000 - 0x00007ffd763a7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffd5e1d0000 - 0x00007ffd5e202000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffd75030000 - 0x00007ffd750aa000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffd38700000 - 0x00007ffd38728000 	C:\Program Files\Java\jdk-11\bin\java.dll
+0x00007ffd64360000 - 0x00007ffd6438f000 	C:\Program Files\Java\jdk-11\bin\instrument.dll
+0x00007ffd3bf20000 - 0x00007ffd3bf36000 	C:\Program Files\Java\jdk-11\bin\zip.dll
+0x00007ffd64590000 - 0x00007ffd6459a000 	C:\Program Files\Java\jdk-11\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100;C:\Program Files\Java\jdk-11\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\lib\idea_rt.jar=56942:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\bin -Dfile.encoding=UTF-8 --module-path=C:\Users\dzang\.m2\repository\org\openjfx\javafx-base\17.0.2\javafx-base-17.0.2-win.jar;C:\Users\dzang\.m2\repository\org\openjfx\javafx-graphics\17.0.2\javafx-graphics-17.0.2-win.jar;C:\Users\dzang\.m2\repository\org\openjfx\javafx-fxml\17.0.2\javafx-fxml-17.0.2-win.jar;C:\Users\dzang\IdeaProjects\FinalProjectSoftware\target\classes;C:\Users\dzang\.m2\repository\org\openjfx\javafx-controls\17.0.2\javafx-controls-17.0.2-win.jar -Djdk.module.main=com.example.finalprojectsoftware 
+java_command: com.example.finalprojectsoftware/com.example.finalprojectsoftware.HelloApplication
+java_class_path (initial): C:\Users\dzang\.m2\repository\org\openjfx\javafx-controls\17.0.2\javafx-controls-17.0.2.jar;C:\Users\dzang\.m2\repository\org\openjfx\javafx-graphics\17.0.2\javafx-graphics-17.0.2.jar;C:\Users\dzang\.m2\repository\org\openjfx\javafx-base\17.0.2\javafx-base-17.0.2.jar;C:\Users\dzang\.m2\repository\org\openjfx\javafx-fxml\17.0.2\javafx-fxml-17.0.2.jar;C:\Users\dzang\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\dzang\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 98566144                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1572864000                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5835340                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122911450                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122911450                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-11
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\MinGW\bin;C:\Users\dzang\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\dzang\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\dzang\AppData\Local\Microsoft\WindowsApps;C:\Users\dzang\AppData\Roaming\npm;C:\Users\dzang\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=dzang
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 22621 (10.0.22621.2506)
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 25 model 80 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 5996M (422M free)
+TotalPageFile size 24428M (AvailPageFile size 71M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 64M, peak: 158M
+
+vm_info: OpenJDK 64-Bit Server VM (11+28) for windows-amd64 JRE (11+28), built on Aug 23 2018 03:04:58 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
